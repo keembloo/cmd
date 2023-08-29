@@ -1,0 +1,20 @@
+@charset "EUC-KR";
+*{margin:0; padding:0; box-sizing: border-box;}
+
+.wrap {
+	width: 100%;
+	margin : 0 auto;
+	
+}
+
+.sidebar {
+	width: 100px;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    background-color: #28323B;
+	color: #4DA0E1;
+	position: fixed;
+	left: 0;
+	right: 0;
+}

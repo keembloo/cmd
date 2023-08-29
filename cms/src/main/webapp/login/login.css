@@ -41,6 +41,7 @@ body{background-color: #282C37;}
 .page_textinfo{
 	font-size: 16px;
 	color: #181818;
+	letter-spacing: -1px;
 }
 .inputbox{
 	margin-top : 30px;

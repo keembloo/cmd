@@ -1,5 +1,5 @@
 @charset "UTF-8";
-*{margin:0; padding:0;}
+*{margin:0; padding:0; box-sizing: border-box;}
 body{background-color: #282C37;}
 
 .wrap{
@@ -17,7 +17,7 @@ body{background-color: #282C37;}
 	margin: 0 auto;
 	box-shadow: 3px 3px 10px;
 	border-radius: 7px;
-	transform: translate(-50%, 50%);
+	transform: translate(-50%, 32%);
 }
 
 .title {
@@ -40,6 +40,7 @@ body{background-color: #282C37;}
 .page_textinfo{
 	font-size: 16px;
 	color: #181818;
+	letter-spacing: -1px;
 }
 
 .inputbox{
@@ -47,19 +48,24 @@ body{background-color: #282C37;}
 	text-align: center;
 }
 
-.inputbox > input {
+.input_id , .input_pw , .input_pwcheck , .input_name {
 	display: inline-block;
-	width: 300px;
-	height: 30px;
+	width: 312px;
+	height: 38px;
 	margin: 0 auto;
-	margin-bottom: 20px;
 	border-radius: 5px;
 	border: 1px solid gray;
 	padding: 3px 5px;
 	color: black;
 	outline: none;
 }
-
+.id_info , .pw_info , .pwcheck_info {
+	font-size :12px;
+	color: red;
+	margin: 7px 0;
+	text-align: left;
+    padding-left: 85px;
+}
 .btn_signup{
 	color: white;
 	background-color: #00ADEF;
@@ -75,9 +81,40 @@ body{background-color: #282C37;}
 	width: 312px;
 	height: 38px;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	border-radius: 5px;
 	outline: none;
 	border: 1px solid gray;
 	padding: 3px 5px;
 }
+.input_name {
+	margin-bottom: 25px;
+}
+.authbox {
+	width: 312px ;
+	margin: 0 auto;
+}
+.input_phone , .input_num {
+	display: inline-block;
+	margin-bottom: 25px;
+	width: 200px;
+	height: 38px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	padding: 3px 5px;
+	color: black;
+	outline: none;
+}
+
+.auth_btn , .check_auth {
+	width: 100px;
+	height: 38px;
+	color: white;
+	background-color: #00ADEF; 
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 0 7px;
+	margin-left : 5px;
+}
+
