@@ -27,6 +27,14 @@
 						<option>재고관리</option>
 						<option>생산관리</option>
 					</select>
+					<select class="level_select">
+						<option>직급</option>
+						<option>사장</option>
+						<option>팀장</option>
+						<option>과장</option>
+						<option>대리</option>
+						<option>사원</option>
+					</select>
 					<input class="input_name" type="text" placeholder="이름">
 					<div class="authbox">
 						<input class="input_phone" type="text" placeholder="전화번호">
@@ -35,7 +43,7 @@
 					<input class="input_num" type="text" placeholder="인증번호 입력">
 					<button class="check_auth">인증확인</button>
 				</div>
-				<button class="btn_signup" type="button">회원가입</button>
+				<button onclick="signup()" class="btn_signup" type="button">회원가입</button>
 			</div>
 		</div>
 	</div> <!-- 전체구역 end -->

@@ -76,7 +76,7 @@ body{background-color: #282C37;}
 	margin-bottom: 10px;
 	cursor: pointer;
 }
-.team_select{
+.team_select , .level_select {
 	display: inline-block;
 	width: 312px;
 	height: 38px;

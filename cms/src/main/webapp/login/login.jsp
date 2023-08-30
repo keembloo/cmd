@@ -24,7 +24,7 @@
 				관리자 계정 신규등록시 신청버튼을 통해 신청내용을 작성해주시기 바랍니다.
 			</div>
 		</div> <!-- container end -->
-		<div class="signup">관리자 계정 신청</div>
+		<a href="../signup/signup.jsp" class="signup">관리자 계정 신청</a>
 	</div> <!-- 전체구역 end -->
 
 
