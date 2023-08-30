@@ -6,20 +6,30 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link href="css/index.css" rel="stylesheet">
+	<!-- 부트스트랩 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 </head>
 <body>
 	<div class="wrap"> <!-- 전체구역 -->
 		<div class="sidebar"> <!-- 사이드바 -->
-			<div class="logo"></div>
+			<div class="logo">CMS</div>
 			<div class="icon_area">
-				<div>홈 아이콘</div>
-				<div>홈</div>
-				<div>재고관리아이콘</div>
-				<div>재고관리</div>
-				<div>제품관리아이콘</div>
-				<div>제품관리</div>
-				<div>승인아이콘</div>
-				<div>승인</div>
+				<div>
+					<i class="bi bi-house"></i>
+				</div>
+				<span>홈</span>
+				<div>
+					<i class="bi bi-display"></i>
+				</div>
+				<span>재고관리</span>
+				<div>
+					<i class="bi bi-cpu"></i>
+				</div>
+				<span>제품관리</span>
+				<div>
+					<i class="bi bi-clipboard-check"></i>
+				</div>
+				<span>승인</span>
 			</div>
 		</div> <!-- 사이드바 end-->
 		

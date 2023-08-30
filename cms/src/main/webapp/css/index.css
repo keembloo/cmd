@@ -18,3 +18,29 @@
 	left: 0;
 	right: 0;
 }
+.logo {
+	width: 100%;
+	height: 50px;
+	background-color: #4DA0E1;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px; /*텍스트 수직정렬*/
+}
+
+.bi{ /*아이콘*/
+	font-size: 35px;
+	display: block;
+}
+.icon_area {
+	display: flex;
+	gap : 15px;
+	flex-direction: column;
+    align-items: center;
+    margin-top : 13px;
+}
+.icon_area span {
+	margin-top: -10px;
+}
+
