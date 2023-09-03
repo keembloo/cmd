@@ -17,7 +17,7 @@ public class MemberDao extends Dao{
 			ps.setString(2, memberDto.getMname());
 			ps.setString(3, memberDto.getMid());
 			ps.setString(4, memberDto.getMpw());
-			ps.setInt(5, memberDto.getclevel());
+			ps.setInt(5, memberDto.getClevel());
 			int row = ps.executeUpdate();
 			//System.out.println("다오 row : "+row);
 			if( row==1 ) return true;
