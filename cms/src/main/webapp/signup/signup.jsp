@@ -14,12 +14,11 @@
 				<h3>회원가입</h3>
 				<div class="page_textinfo">관리자 회원가입 페이지입니다</div>
 				<div class="inputbox">
-					<input class="input_id" name="input_id" type="text" placeholder="아이디">
+					<input maxlength="10" onkeyup="idcheck()" class="input_id" name="input_id" type="text" placeholder="아이디">
 					<div class="id_info">중복된 아이디입니다.</div>
-					<input class="input_pw" name="input_pw" type="password" placeholder="비밀번호">
-					<div class="pw_info">비밀번호는 영문+숫자이어야합니다.</div>
-					<input class="input_pwcheck" type="password" placeholder="비밀번호확인">
-					<div class="pwcheck_info">비밀번호가 일치하지 않습니다.</div>
+					<input maxlength="20" onkeyup="pwcheck()" class="input_pw" name="input_pw" type="password" placeholder="비밀번호">
+					<input maxlength="20" onkeyup="pwcheck()" class="input_pwcheck" type="password" placeholder="비밀번호확인">
+					<div class="pwcheck_info"></div>
 					<select name="team_select" class="team_select">
 						<option>팀</option>
 						<option>경영지원</option>
