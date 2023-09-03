@@ -30,6 +30,10 @@ create table memberlist( mno int auto_increment not null,
     clevel int,
     foreign key (clevel) references companyLevel(clevel)
 );
+select * from memberlist;
+# 회원가입 
+insert memberlist(mcategory, mname , mid , mpw , clevel ) values('test','test','test','test',1);
+
 
 #제품 카테고리목록
 drop table if exists category;
