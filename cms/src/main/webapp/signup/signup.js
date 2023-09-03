@@ -6,11 +6,12 @@ function signupbtn(){
 	let input_pw = document.querySelector('.input_pw').value;
 	let input_pwcheck = document.querySelector('.input_pwcheck').value;
 	let team_select = document.querySelector('.team_select').value;
+	let level_select = document.querySelector('.level_select').value;
 	let input_name = document.querySelector('.input_name').value;
 	
 	
 	let info = {input_id : input_id ,input_pw : input_pw ,
-		team_select : team_select, input_name : input_name };
+		team_select : team_select, level_select : level_select ,input_name : input_name };
 		
 	$.ajax({
 		url : "/cms/MemberControll",
@@ -18,6 +19,9 @@ function signupbtn(){
 		data : info ,
 		success : r => {console.log(r)
 			console.log('된다');
+			if(r){
+				//로그인창으로이동
+			}
 			
 		},
 		error : e => {console.log(e);}

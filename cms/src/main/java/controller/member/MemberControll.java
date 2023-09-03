@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import dao.MemberDao;
 import dto.MemberDto;
 
 
@@ -31,12 +32,18 @@ public class MemberControll extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String id = request.getParameter("input_id"); System.out.println("id : "+id);
-		String pw = request.getParameter("input_pw"); System.out.println("pw : "+pw);
-		String team = request.getParameter("team_select"); System.out.println("team : "+team);
-		String name = request.getParameter("input_name"); System.out.println("name : "+name);
-
-		MemberDto memberDto = new member
+		String id = request.getParameter("input_id"); //System.out.println("id : "+id);
+		String pw = request.getParameter("input_pw"); //System.out.println("pw : "+pw);
+		String team = request.getParameter("team_select"); //System.out.println("team : "+team);
+		int clevel = Integer.parseInt(request.getParameter("level_select")); //System.out.println("clevel : "+clevel);
+		String name = request.getParameter("input_name"); //System.out.println("name : "+name);
+		
+		MemberDto memberDto = new MemberDto(clevel, team, name, id, pw);
+		
+		boolean result = MemberDao.getInstence().signup(memberDto);
+		
+		response.setContentType("application/json;charset=UTF-8");
+		response.getWriter().print(result);
 	}
 
 

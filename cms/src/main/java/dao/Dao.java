@@ -15,9 +15,9 @@ public class Dao {
 	public Dao() { // 자식객체가 생성되면 부모객체도 같이 생성 !! [ 자식객체 생성되면 부모클래스의 생성자 호출된다 ] 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jspweb", "root" , "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/portfolio", "root" , "1234");
 			
-			System.out.println("안내 DB연동성공");
+			//System.out.println("안내 DB연동성공");
 		} catch (Exception e) {System.out.println("경고 DB연동실패"+e);}
 	}
 

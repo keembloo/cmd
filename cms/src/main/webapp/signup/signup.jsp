@@ -27,6 +27,15 @@
 						<option>재고관리</option>
 						<option>생산관리</option>
 					</select>
+					<select name="level_select" class="level_select">
+						<option>직급</option>
+						<option value=6>사장</option>
+						<option value=5>부장</option>
+						<option value=4>과장</option>
+						<option value=3>대리</option>
+						<option value=2>주임</option>
+						<option value=1>사원</option>
+					</select>
 					<input name="input_name" class="input_name" type="text" placeholder="이름">
 					
 				</div>
