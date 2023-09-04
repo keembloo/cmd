@@ -24,4 +24,19 @@ public class MemberDao extends Dao{
 		}catch (Exception e) {System.out.println(e);}
 		return false;
 	}
+	
+	// 2. 아이디 중복검사
+	public boolean idFind(String id) {
+		try {
+			String sql = "select * from memberlist where mid = "+id;
+			//System.out.println("sql : "+sql);
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				return true;
+			}
+		}catch (Exception e) {System.out.println(e);}
+		return false;
+	}
+	
 }

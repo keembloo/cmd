@@ -25,11 +25,14 @@ public class MemberControll extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String id = request.getParameter("input_id");
+		boolean result = MemberDao.getInstence().idFind(id);
+		
+    	response.setContentType("application/json;charset=UTF-8");
+    	response.getWriter().print(result);
 	}
 
-
+	// 회원가입
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String id = request.getParameter("input_id"); //System.out.println("id : "+id);

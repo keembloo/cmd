@@ -15,7 +15,7 @@
 				<div class="page_textinfo">관리자 회원가입 페이지입니다</div>
 				<div class="inputbox">
 					<input maxlength="10" onkeyup="idcheck()" class="input_id" name="input_id" type="text" placeholder="아이디">
-					<div class="id_info">중복된 아이디입니다.</div>
+					<div class="id_info"></div>
 					<input maxlength="20" onkeyup="pwcheck()" class="input_pw" name="input_pw" type="password" placeholder="비밀번호">
 					<input maxlength="20" onkeyup="pwcheck()" class="input_pwcheck" type="password" placeholder="비밀번호확인">
 					<div class="pwcheck_info"></div>

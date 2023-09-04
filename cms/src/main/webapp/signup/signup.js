@@ -7,17 +7,21 @@
 // 아이디 유효성검사
 function idcheck(){
 	let input_id = document.querySelector('.input_id').value;
-	let id_info = document.querySelector('.input_id');
+	let id_info = document.querySelector('.id_info');
 	
 	let idj = /^[a-z0-9]{5,20}$/
+	console.log(" id : "+idj.test(input_id));
 	if (idj.test(input_id)){
-		// 이거해야됨
-		
-		
-		
-		
-		
-		
+		$.ajax({
+				url : "/cms/MemberControll",
+				method : "get",
+				data : { input_id : input_id },
+				success : r => {
+					if (r) {id_info.innerHTML = '사용중인 아이디입니다'; checkList[0]=false;}
+					else {id_info.innerHTML = '사용 가능한 아이디입니다'; checkList[0]=true;}
+				} ,
+				error : e => {console.log(e);}
+			})
 	} else {
 		id_info.innerHTML =`아이디는 5~20글자 사이면서 영문+숫자 조합이어야합니다.`
 		checkList[0] = false;
@@ -62,9 +66,7 @@ function signupbtn(){
 		let team_select = document.querySelector('.team_select').value;
 		let level_select = document.querySelector('.level_select').value;
 		let input_name = document.querySelector('.input_name').value;
-	
-		
-		
+
 		let info = {input_id : input_id ,input_pw : input_pw ,
 			team_select : team_select, level_select : level_select ,input_name : input_name };
 			
@@ -72,16 +74,15 @@ function signupbtn(){
 			url : "/cms/MemberControll",
 			method : "post" ,
 			data : info ,
-			success : r => {console.log(r)
-				console.log('된다');
+			success : r => {//console.log(r)
 				if(r){
-					//로그인창으로이동
+					alert('회원가입이 정상적으로 완료되었습니다. 로그인해주세요.')//로그인창으로이동
+					location.href='/cms/login/login.jsp';
 				}
 				
 			},
 			error : e => {console.log(e);}
-			
-			
+
 		})
 	} else {
 		alert('정상적으로 입력 안된 내용이 있습니다.');

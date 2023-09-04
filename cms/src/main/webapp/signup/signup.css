@@ -46,6 +46,7 @@ body{background-color: #282C37;}
 .inputbox{
 	margin-top : 30px;
 	text-align: center;
+	position: relative;
 }
 
 .input_id , .input_pw , .input_pwcheck , .input_name {
@@ -58,14 +59,25 @@ body{background-color: #282C37;}
 	padding: 3px 5px;
 	color: black;
 	outline: none;
+    margin-bottom: 25px;
 }
-.id_info , .pw_info , .pwcheck_info {
+.id_info , .pwcheck_info {
+	position : absolute;
+	left: 0;
+	top: 0;
 	font-size :12px;
 	color: red;
 	margin: 7px 0;
 	text-align: left;
     padding-left: 85px;
 }
+.id_info {
+	top: 35px;
+}
+.pwcheck_info{
+	top: 160px;
+}
+
 .btn_signup{
 	color: white;
 	background-color: #00ADEF;
