@@ -29,6 +29,7 @@ body{background-color: #282C37;}
     flex-direction: column;
     align-items: center;
    	padding-bottom: 30px;
+   	position: relative;
 }
 
 .title > h3 {
@@ -71,7 +72,14 @@ body{background-color: #282C37;}
 	margin-bottom: 10px;
 	cursor: pointer;
 }
-
+.logincheckbox{
+	position: absolute;
+	top: 285px;
+	left: 157px;
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+}
 .etc_info {
 	background-color: gray;
 	color: white;

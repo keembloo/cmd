@@ -39,4 +39,20 @@ public class MemberDao extends Dao{
 		return false;
 	}
 	
+	// 3. 로그인
+	public boolean login(String id , String pw) {
+		try {
+			String sql = "select * from memberlist where mid = ? and mpw = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.setString(2, pw);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				return true;
+			}
+		}catch (Exception e) {System.out.println(e);}
+		return false;
+	}
+	
+	
 }

@@ -33,7 +33,10 @@ create table memberlist( mno int auto_increment not null,
 select * from memberlist;
 # 회원가입 
 insert memberlist(mcategory, mname , mid , mpw , clevel ) values('test','test','test','test',1);
+insert memberlist(mcategory, mname , mid , mpw , clevel ) values('경영지원','김규리','admin','1234',6);
 
+# 로그인
+select * from memberlist where mid = 'test' and mpw = 'test';
 
 #제품 카테고리목록
 drop table if exists category;
