@@ -23,7 +23,7 @@ public class MemberControll extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-
+    // 아이디유효성검사
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("input_id");
 		boolean result = MemberDao.getInstence().idFind(id);
@@ -35,11 +35,11 @@ public class MemberControll extends HttpServlet {
 	// 회원가입
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String id = request.getParameter("input_id"); //System.out.println("id : "+id);
-		String pw = request.getParameter("input_pw"); //System.out.println("pw : "+pw);
-		String team = request.getParameter("team_select"); //System.out.println("team : "+team);
-		int clevel = Integer.parseInt(request.getParameter("level_select")); //System.out.println("clevel : "+clevel);
-		String name = request.getParameter("input_name"); //System.out.println("name : "+name);
+		String id = request.getParameter("input_id"); System.out.println("id : "+id);
+		String pw = request.getParameter("input_pw"); System.out.println("pw : "+pw);
+		String team = request.getParameter("team_select"); System.out.println("team : "+team);
+		int clevel = Integer.parseInt(request.getParameter("level_select")); System.out.println("clevel : "+clevel);
+		String name = request.getParameter("input_name"); System.out.println("name : "+name);
 		
 		MemberDto memberDto = new MemberDto(clevel, team, name, id, pw);
 		

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.pTable{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.pTitle{
+	background-color: #e8e8e8;
+	text-align: center;
+}
+.pTitle th {
+	padding: 10px 0;
+}
+.pContent{
+	border-bottom: 1px solid #e8e8e8;
+	text-align: center;
+}
+.pContent td {
+	padding: 10px 0;
+}
+
+.peditBtn , .pdeleteBtn {
+	border: none;
+	background-color: #4DA0E1;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
