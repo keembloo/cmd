@@ -28,7 +28,7 @@ public class MemberDao extends Dao{
 	// 2. 아이디 중복검사
 	public boolean idFind(String id) {
 		try {
-			String sql = "select * from memberlist where mid = "+id;
+			String sql = "select * from memberlist where mid = '"+id+"'";
 			//System.out.println("sql : "+sql);
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();

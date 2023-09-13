@@ -17,6 +17,7 @@ function idcheck(){
 				method : "get",
 				data : { input_id : input_id },
 				success : r => {
+					console.log("r : "+r);
 					if (r) {id_info.innerHTML = '사용중인 아이디입니다'; checkList[0]=false;}
 					else {id_info.innerHTML = '사용 가능한 아이디입니다'; checkList[0]=true;}
 				} ,
