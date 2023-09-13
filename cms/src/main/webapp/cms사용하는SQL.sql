@@ -21,7 +21,8 @@ select * from companyLevel;
 
 #회원 테이블
 drop table if exists memberlist;
-create table memberlist( mno int auto_increment not null, 
+create table memberlist( 
+	mno int auto_increment not null, 
 	mcategory varchar(10) not null, 
     mname varchar(10) not null, 
     mid varchar(10) not null unique, 
@@ -46,6 +47,13 @@ create table category (
     cprice int not null,
     primary key(cno) 
 );
+#제품 카테고리 샘플
+insert category(cname, cprice) values ('무지반팔티셔츠' , 15000);
+insert category(cname, cprice) values ('프린트반팔티셔츠' , 29000);
+insert category(cname, cprice) values ('옥스포드셔츠' , 42000);
+insert category(cname, cprice) values ('린넨긴팔셔츠' , 35000);
+
+select * from category order by cno asc;
 
 #제품 컬러
 drop table if exists color;
@@ -54,6 +62,16 @@ create table color (
     colorname varchar(10) not null unique ,
     primary key(colorno)
 );
+# 컬러 샘플
+insert color(colorname) values('흰색');
+insert color(colorname) values('검정');
+insert color(colorname) values('빨강');
+insert color(colorname) values('오렌지');
+insert color(colorname) values('마린블루');
+insert color(colorname) values('퍼플');
+
+select * from color order by colorno asc;
+
 
 #제품 사이즈
 drop table if exists size;
@@ -62,6 +80,15 @@ create table size (
     ssize varchar(15) not null unique,
     primary key(sno)
 );
+#제품 샘플
+insert size(ssize) values('85(xs)');
+insert size(ssize) values('90(S)');
+insert size(ssize) values('95(M)');
+insert size(ssize) values('100(L)');
+insert size(ssize) values('105(XL)');
+insert size(ssize) values('110(2XL)');
+
+select * from size order by sno asc;
 
 #재고 목록
 drop table if exists stock;
@@ -78,3 +105,14 @@ create table stock (
     mno int ,
     foreign key(mno) references memberlist(mno)
 );
+#재고 샘플
+insert stock(scode, scount ) values('AA001' , 100);
+insert stock(scode, scount ) values('AA002' , 100);
+insert stock(scode, scount ) values('AB001' , 100);
+insert stock(scode, scount ) values('AB002' , 100);
+insert stock(scode, scount , cno , colorno , sno , mno ) 
+values('AC002' , 99 , 2 , 3 , 4 , 1 );
+
+select * from stock;
+
+

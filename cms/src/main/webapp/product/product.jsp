@@ -38,9 +38,59 @@
 					<button class="pdeleteBtn" type="button">삭제</button>
 				</td>
 			</tr>
+			
+			<tr class="pContent"> <!-- 제품1개 -->
+				<td>1</td>
+				<td>무지반팔티셔츠</td>
+				<td>15000원</td>
+				<td>100(L)</td>
+				<td>블랙</td>
+				<td>김사원</td>
+				<td>2023-09-01</td>
+				<td>100</td>
+				<td>AA001</td>
+				<td>
+					<button class="peditBtn" type="button">수정</button>
+					<button class="pdeleteBtn" type="button">삭제</button>
+				</td>
+			</tr>
+			
+			<tr class="pContent"> <!-- 제품1개 -->
+				<td>1</td>
+				<td>무지반팔티셔츠</td>
+				<td>15000원</td>
+				<td>100(L)</td>
+				<td>블랙</td>
+				<td>김사원</td>
+				<td>2023-09-01</td>
+				<td>100</td>
+				<td>AA001</td>
+				<td>
+					<button class="peditBtn" type="button">수정</button>
+					<button class="pdeleteBtn" type="button">삭제</button>
+				</td>
+			</tr>
+			
+			<tr class="pContent"> <!-- 제품1개 -->
+				<td>1</td>
+				<td>무지반팔티셔츠</td>
+				<td>15000원</td>
+				<td>100(L)</td>
+				<td>블랙</td>
+				<td>김사원</td>
+				<td>2023-09-01</td>
+				<td>100</td>
+				<td>AA001</td>
+				<td>
+					<button class="peditBtn" type="button">수정</button>
+					<button class="pdeleteBtn" type="button">삭제</button>
+				</td>
+			</tr>
 		</table>
 	
 	</div>
-
+	
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/cms/js/product.js" type="text/javascript"></script>
 </body>
 </html>
