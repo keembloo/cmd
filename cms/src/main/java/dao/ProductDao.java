@@ -22,19 +22,17 @@ public class ProductDao extends Dao{
 			rs = ps.executeQuery();
 			//System.out.println("다오실행됨"+rs.next());
 			while (rs.next()) {
-				ProductDto producDto = new ProductDto(
-						rs.getString(1), 
-						rs.getInt(2), 
-						rs.getInt(3), 
-						rs.getInt(4), 
-						rs.getInt(5), 
-						rs.getInt(6)
+				ProductDto productDto = new ProductDto(
+						rs.getString("scode"), 
+						rs.getInt("scount"), 
+						rs.getInt("cno"), 
+						rs.getInt("colorno"), 
+						rs.getInt("sno"), 
+						rs.getInt("mno")
 						);
-				System.out.println("다오 producDto"+producDto);
-				list.add(producDto);
+				System.out.println("다오"+productDto);
+				list.add(productDto);
 			}
-			System.out.println("다오 list : "+list);
-			return list;
 		}catch (Exception e) {
 			System.out.println(e);
 		}

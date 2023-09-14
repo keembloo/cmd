@@ -106,13 +106,11 @@ create table stock (
     foreign key(mno) references memberlist(mno)
 );
 #재고 샘플
-insert stock(scode, scount , cno , colorno , sno , mno) values('AA001' , 100 , 1 , 2 , 2 , 1);
-insert stock(scode, scount , cno , colorno , sno , mno) values('AA002' , 100 , 3 , 1 , 3 , 1);
-insert stock(scode, scount , cno , colorno , sno , mno) values('AB001' , 100 , 2 , 1 , 4 , 1);
-insert stock(scode, scount , cno , colorno , sno , mno) values('AB002' , 100 , 4 , 3 , 1 , 1);
+insert stock(scode, scount , cno , colorno , sno , mno ) values('AA001' , 100 , 2 , 3 , 4 , 1 );
+insert stock(scode, scount , cno , colorno , sno , mno ) values('AA002' , 100 , 4 , 1 , 2 , 1 );
+insert stock(scode, scount , cno , colorno , sno , mno ) values('AB001' , 100 , 1 , 1 , 2 , 1 );
+insert stock(scode, scount , cno , colorno , sno , mno ) values('AB002' , 100 , 3 , 3 , 3 , 1 );
 insert stock(scode, scount , cno , colorno , sno , mno ) 
 values('AC002' , 99 , 2 , 3 , 4 , 1 );
-
-select * from stock;
 
 

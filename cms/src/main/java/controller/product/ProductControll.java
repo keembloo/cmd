@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import dao.ProductDao;
 import dto.ProductDto;
 
@@ -26,9 +28,12 @@ public class ProductControll extends HttpServlet {
 		System.out.println("연결");
 		ArrayList<ProductDto> result = ProductDao.getInstence().pview();
 		
-		System.out.println("컨트롤러 result :"+result);
+		ObjectMapper objectMapper = new ObjectMapper();
+		String jsonArray = objectMapper.writeValueAsString( result ); // JSON타입으로 변환은 불가능하지만 JSON형식의 문자열타입 로 변환 
+		
 		response.setContentType("application/json;charset=UTF-8"); // js에서 true로 인식
-    	response.getWriter().print(result);
+    	response.getWriter().print(jsonArray);
+    	System.out.println("컨트롤러 jsonArray :"+jsonArray);
 	}
 
 	

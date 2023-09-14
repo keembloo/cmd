@@ -21,10 +21,11 @@ function pview(){
 	$.ajax({
 		url : "/cms/ProductControll" , 
 		method : "get" ,
+		async : false,  /* 비동기화(기본값=true) , 동기화(false) 설정하는 속성 ( 우선적인 ajax실행 응답이 필요할때. )*/
 		data : {},
 		success : r=>{
-			console.log("productDto : "+r.productDto);	
-			r.productDto.forEach( p => {
+			console.log("r : "+r);	
+			r.forEach( p => {
 					html += `<tr class="pContent">
 						<td>1</td>
 						<td>무지반팔티셔츠</td>
@@ -46,7 +47,7 @@ function pview(){
 			});	
 
 		},
-		error : e=>{console.log(e);}
+		error : e=>{console.log("에러"+e);}
 	})
 	
 }
