@@ -30,9 +30,10 @@ public class ProductDao extends Dao{
 						rs.getInt(5), 
 						rs.getInt(6)
 						);
-				//System.out.println("다오 producDto"+producDto);
+				System.out.println("다오 producDto"+producDto);
 				list.add(producDto);
 			}
+			System.out.println("다오 list : "+list);
 			return list;
 		}catch (Exception e) {
 			System.out.println(e);

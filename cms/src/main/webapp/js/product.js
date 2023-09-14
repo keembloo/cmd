@@ -23,7 +23,7 @@ function pview(){
 		method : "get" ,
 		data : {},
 		success : r=>{
-			console.log(r);	
+			console.log("productDto : "+r.productDto);	
 			r.productDto.forEach( p => {
 					html += `<tr class="pContent">
 						<td>1</td>
