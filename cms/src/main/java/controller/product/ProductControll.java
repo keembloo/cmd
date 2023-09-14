@@ -26,9 +26,9 @@ public class ProductControll extends HttpServlet {
 		System.out.println("연결");
 		ArrayList<ProductDto> result = ProductDao.getInstence().pview();
 		
+		System.out.println("컨트롤러 result :"+result);
 		response.setContentType("application/json;charset=UTF-8"); // js에서 true로 인식
     	response.getWriter().print(result);
-    	System.out.println("컨트롤러 result :"+result);
 	}
 
 	

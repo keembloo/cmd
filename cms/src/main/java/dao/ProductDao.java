@@ -20,7 +20,7 @@ public class ProductDao extends Dao{
 			String sql = "select * from stock";
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
-			
+			//System.out.println("다오실행됨"+rs.next());
 			while (rs.next()) {
 				ProductDto producDto = new ProductDto(
 						rs.getString(1), 
@@ -30,8 +30,10 @@ public class ProductDao extends Dao{
 						rs.getInt(5), 
 						rs.getInt(6)
 						);
+				//System.out.println("다오 producDto"+producDto);
 				list.add(producDto);
 			}
+			return list;
 		}catch (Exception e) {
 			System.out.println(e);
 		}
